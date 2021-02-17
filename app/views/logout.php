@@ -1,13 +1,6 @@
-	<!-- <?php 
-	
-		session_start();
-		session_destroy();
-		
-	?> -->
-	
 	<?php 
 
-		$title ="Bear Gaming | 404";
+		$title ="Bear Gaming | Logout";
 		$css = "../public/scss/";
 		$js = "";
 		include("./includes/header.php"); 

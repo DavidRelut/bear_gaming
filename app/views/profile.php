@@ -1,6 +1,6 @@
 	<?php 
 
-		$title ="Bear Gaming | Portal";
+		$title ="Bear Gaming | Profile";
         $css = "../public/scss/portal/portal.css";
         $js = "";
 		include("./includes/header.php"); 
@@ -9,6 +9,18 @@
     
 
         <body>
+
+            <?php 
+
+                if (!isset($_COOKIE['existing_pseudo'])){
+                    header('refresh:3; url=index.php');
+                }
+                else {
+                    $pseudo = $_COOKIE['existing_pseudo'];
+                     header('Location: profile.php');
+
+            ?> 
+        
 
             <!-- <img src="../public/images/pixelday2021-sorapoi-size.png"></img> -->
 
@@ -25,6 +37,12 @@
                 <button type="submit" value="Change password"></button>
             
             </form>
+
+
+            <?php 
+                # CLOSING CURLY BRACKET OF ELSE FOR THE COOKIE OF SESSION
+                }
+            ?>
 
         </body>
 

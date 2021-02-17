@@ -1,13 +1,3 @@
-	<!-- <?php 
-	
-		session_start();
-
-        // include("../database/load_bdd.php");
-		// $bdd = connection_mysql();
-	
-	?> -->
-	
-	
 	<?php 
 
 		$css = "../public/scss/styles.css";
@@ -65,8 +55,16 @@
 				# GOOD PASSWORD
 				else 
 				{
-					# STORE COOKIE OF THE PLAYER !! DON'T WORK !!
-					// $_COOKIE['existing_pseudo'] = true;
+					# RETRIEVE NAME ASSOCIATED WITH THE FORM EMAIL
+					$query = $bdd->prepare("SELECT pseudo FROM users WHERE email=:email");
+					$query->execute(['email'=>$email]);
+
+					$res = $query->fetch();
+					$pseudo_cookie = $res['pseudo'];
+
+					# CREATE COOKIE USER SESSION
+					setcookie("existing_pseudo_cookie", $pseudo_cookie, time() + 10000, '/');
+					setcookie("existing_pseudo", $pseudo, time() +3000, '/');
 
 					# REDIRECT TO PLAYGROUND PAGE
 					header("location: ../views/portal.php");
