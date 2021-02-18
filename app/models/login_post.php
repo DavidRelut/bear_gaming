@@ -21,27 +21,27 @@
 			remove_cookies();
 
 			# DECLARE VARIABLE FOR POST OF FORM
-			$pseudo = htmlspecialchars($_POST['pseudo']);
+			$email = htmlspecialchars($_POST['email']);
 			$password = htmlspecialchars($_POST['password']);
 
-			# CHECK IF PSEUDO EXIST
-			$req = $bdd->prepare('SELECT count(pseudo) AS pseudo_ok FROM users WHERE pseudo = :pseudo');
-			$req->execute(['pseudo'=> $pseudo]);
+			# CHECK IF EMAIL EXIST
+			$req = $bdd->prepare('SELECT count(email) AS email_ok FROM users WHERE email = :email');
+			$req->execute(['email'=> $email]);
 			$res = $req->fetch();
 
-			$pseudo_ok = $res['pseudo_ok'];
+			$email_ok = $res['email_ok'];
 
-			# ERROR: BAD PSEUDO !
-			if ($pseudo_ok == 0){
-				setcookie('error_not_existing_pseudo', true, time() + 3, '/');
+			# ERROR: BAD EMAIL !
+			if ($email_ok == 0){
+				setcookie('error_not_existing_email', true, time() + 3, '/');
 				header("Location: ../views/index.php");
-				// echo 'Any account is associated with this pseudo';
+				// echo 'Any account is associated with this email';
 			} 
 			else {
 				
-				# CHECK PASSWORD WELL ASSOCIATED WITH PSEUDO
-				$req_password = $bdd->prepare('SELECT password FROM users WHERE pseudo=:pseudo');
-				$req_password->execute(['pseudo'=> $pseudo]);
+				# CHECK PASSWORD WELL ASSOCIATED WITH EMAIL
+				$req_password = $bdd->prepare('SELECT password FROM users WHERE email=:email');
+				$req_password->execute(['email'=> $email]);
 				$res = $req_password->fetch();
 				$password_bdd = $res['password'];
 				
@@ -55,16 +55,15 @@
 				# GOOD PASSWORD
 				else 
 				{
-					# RETRIEVE NAME ASSOCIATED WITH THE FORM EMAIL
+					# RETRIEVE PSEUDO ASSOCIATED WITH THE FORM EMAIL
 					$query = $bdd->prepare("SELECT pseudo FROM users WHERE email=:email");
 					$query->execute(['email'=>$email]);
-
 					$res = $query->fetch();
 					$pseudo_cookie = $res['pseudo'];
 
 					# CREATE COOKIE USER SESSION
-					setcookie("existing_pseudo_cookie", $pseudo_cookie, time() + 10000, '/');
-					setcookie("existing_pseudo", $pseudo, time() +3000, '/');
+					setcookie("existing_pseudo", $pseudo_cookie, time() + 48200, '/');
+					setcookie("existing_email", $email, time() + 48200, '/');
 
 					# REDIRECT TO PLAYGROUND PAGE
 					header("location: ../views/portal.php");

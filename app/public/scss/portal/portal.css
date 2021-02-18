@@ -137,4 +137,68 @@ table {
 /* Secondary color */
 /* Error connect */
 /* Valid connect */
-/* Acceuil *//*# sourceMappingURL=portal.css.map */
+/* Acceuil */
+* {
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+body {
+  position: fixed;
+  z-index: 0;
+  background-image: url(../../images/pixelday2021-sorapoi-size.png);
+  width: 100vw;
+  height: 100vh;
+}
+
+header {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.card {
+  width: 17rem;
+  display: inline-flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.game {
+  width: 17rem;
+  height: 22rem;
+  border-radius: 10px;
+}
+
+.game_name {
+  width: 17rem;
+  text-align: center;
+}
+
+.game_description {
+  width: 17rem;
+  color: #ff7b00;
+}
+
+hr {
+  border: none;
+  border-top: 3px double #333;
+  color: #333;
+  overflow: visible;
+  text-align: center;
+  height: 5px;
+  width: 17rem;
+}
+
+hr:after {
+  background: #fff;
+  content: "Bear Gaming";
+  color: #ff7b00;
+  padding: 0 4px;
+  position: relative;
+  top: -13px;
+}/*# sourceMappingURL=portal.css.map */

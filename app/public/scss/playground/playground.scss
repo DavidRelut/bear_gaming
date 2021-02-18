@@ -1,6 +1,10 @@
 @import '../reset';
 @import '../variables';
 
+* {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
 body {
-  // background-image: url('../../images/pixelday2021-sorapoi-size.png');
+  background-image: url('../../images/pixelday2021-sorapoi-size.png');
 }

@@ -17,7 +17,7 @@
                 }
                 else {
                     $pseudo = $_COOKIE['existing_pseudo'];
-                     header('Location: profile.php');
+                    //  header('Location: profile.php');
 
             ?> 
         
@@ -26,17 +26,17 @@
 
             <a href="./logout.php">LOGOUT</a>
 
-            <form>
-
-                Changer de mot de passe ?
+                <!-- Changer de mot de passe ?
 
                 Tapez votre mot de passe : <input type="text" name="last_password" required></input>
 
                 Nouveau mot de passe : <input type="password" name="new_password" required></input>
 
-                <button type="submit" value="Change password"></button>
+                <button type="submit" value="Change password"></button> -->
+
+
+
             
-            </form>
 
 
             <?php 

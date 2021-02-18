@@ -138,6 +138,10 @@ table {
 /* Error connect */
 /* Valid connect */
 /* Acceuil */
+* {
+  font-family: "Roboto Condensed", sans-serif;
+}
+
 body {
   background-color: #222;
 }/*# sourceMappingURL=styles.css.map */

@@ -137,4 +137,11 @@ table {
 /* Secondary color */
 /* Error connect */
 /* Valid connect */
-/* Acceuil *//*# sourceMappingURL=playground.css.map */
+/* Acceuil */
+* {
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+body {
+  background-image: url("../../images/pixelday2021-sorapoi-size.png");
+}/*# sourceMappingURL=playground.css.map */
