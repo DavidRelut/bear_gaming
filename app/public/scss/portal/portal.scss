@@ -6,30 +6,79 @@
 }
 
 body {
-  position: fixed;
-  z-index: 0;
+  // position: sticky;
+  // z-index: 0;
   background-image: url(../../images/pixelday2021-sorapoi-size.png);
-  width: 100vw;
-  height: 100vh;
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 header {
   display: flex;
   justify-content: space-evenly;
-  flex-wrap: wrap;
+  height: 15vh;
+  display: flex;
+  align-items: center;
+}
+
+ul {
+  display: contents;
+}
+
+a {
+  text-decoration: none;
+  color: $yellow_theme;
+  &:hover {
+    color: white;
+  }
+}
+
+form {
+  text-align: center;
+  margin-left: 4rem;
+}
+
+input {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: chocolate;
+  font-size: 1rem;
+  font-weight: bold;
+  font: status-bar;
+  background-color: #222;
+  border-radius: 1rem;
+  &:focus {
+    outline: none;
+  }
+}
+
+main {
+  // position: fixed;
 }
 
 .container {
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
 .card {
   width: 17rem;
-  //   height: 33rem;
+  height: 81.5vh;
   display: inline-flex;
   flex-direction: column;
   text-align: center;
+  border-radius: 20px;
+  margin-bottom: 2rem;
+  &:nth-child(odd) {
+    background: $black;
+    color: $orange_theme;
+  }
+  &:nth-child(even) {
+    background: $fushia;
+    color: $wheat;
+  }
 }
 
 .game {
@@ -41,10 +90,12 @@ header {
 .game_name {
   width: 17rem;
   text-align: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: $yellow_theme;
 }
 .game_description {
   width: 17rem;
-  color: $chocalate;
 }
 
 hr {
@@ -55,14 +106,17 @@ hr {
   text-align: center;
   height: 5px;
   width: 17rem;
+  // position: absolute;
+  // bottom: 14%;
 }
 
 hr:after {
-  background: #fff;
+  background: #000;
   //   content: '§';
   content: 'Bear Gaming';
   color: $orange;
   padding: 0 4px;
   position: relative;
-  top: -13px;
+  top: -9px;
+  border-radius: 5px;
 }

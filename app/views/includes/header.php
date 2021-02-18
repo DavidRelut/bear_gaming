@@ -8,6 +8,7 @@
 			<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,300&display=swap" rel="stylesheet">
 			<link rel="stylesheet" href=<?php echo $css ?>>
 			<script type="text/javascript" src=<?php echo $js ?>></script>
+			<!-- <link rel="shortcut icon" type="image/png" href="../../public/images/favicon.png"/> -->
     	    <title><?php echo $title ?></title>
     	</head>
 </html>
