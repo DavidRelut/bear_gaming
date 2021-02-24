@@ -135,6 +135,13 @@ div#image-head.image-head {
   place-items: center;
 }
 
+a {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .center {
   display: flex;
   text-align: center;
@@ -152,12 +159,6 @@ div#image-head.image-head {
   height: 70px;
   width: 220px;
   border-radius: 50px;
-}
-
-.circle {
-  height: 200px;
-  width: 200px;
-  border-radius: 50%;
 }
 
 .outer a,
@@ -186,12 +187,6 @@ div#image-head.image-head {
   border-radius: 50px;
 }
 
-.circle a {
-  height: 180px;
-  width: 180px;
-  border-radius: 50%;
-}
-
 .outer span {
   height: 100%;
   width: 100%;
@@ -200,10 +195,6 @@ div#image-head.image-head {
 
 .button span {
   border-radius: 50px;
-}
-
-.circle span {
-  border-radius: 50%;
 }
 
 .outer:hover span:nth-child(1) {

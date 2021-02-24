@@ -13,7 +13,7 @@
 			<link rel="stylesheet" href=<?php echo $css ?>>
 			<script type="text/javascript" src=<?php echo $js ?>></script>
 			<script src="https://kit.fontawesome.com/dca83d2092.js" crossorigin="anonymous"></script>
-			<link rel="shortcut icon" type="image/png" href="../../public/images/favicon.png"/>
+			
     	    <title><?php echo $title ?></title>
     	</head>
 </html>

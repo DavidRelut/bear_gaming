@@ -1,12 +1,15 @@
-
-	<?php 
-
-		$title ="Bear Gaming | Register";
-		$css = "../public/scss/register/register.css";
-		$js = "";
-		include("./includes/header.php"); 
-
-		?> 
+<!DOCTYPE html>
+<html lang="en">
+	 <head>
+		<link rel="shortcut icon" type="image/png" href="../public/images/favicon.png"/>
+		<?php 
+			$title ="Bear Gaming | Register";
+			$css = "../public/scss/register/register.css";
+			$js = "";
+			include("./includes/header.php"); 
+		?>
+    </head>	
+ 
 		
 
 	<body>
@@ -997,7 +1000,4 @@
 
 	
 	</body>
-	
-	<!-- <?php 
-		include("./includes/footer.php")
-	?> -->
+</html>

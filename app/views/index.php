@@ -1,12 +1,19 @@
-	<?php 
+<!DOCTYPE html>
+<html lang="en">
+	<head>	
+		<link rel="shortcut icon" type="image/png" href="../public/images/favicon.png"/>
+		<?php 
+			$title ="Bear Gaming | Home";
+			$css = "../public/scss/styles.css";
+			$js = "";
+			include("./includes/header.php"); 
+		?> 
+	</head>
 
-		$title ="Bear Gaming | Home";
-		$css = "../public/scss/styles.css";
-		$js = "";
-		include("./includes/header.php"); 
+	
 
-	?> 
-
+	
+	
     <body>
 		<header>
 			<div class="box">
@@ -26,10 +33,10 @@
     		    <img src="https://github.com/samdbeckham/blog/blob/master/dev/_assets/images/articles/firewatch/layer_2.png?raw=true" />
     		</div>
     		<div class="parallax__layer parallax__layer__3">
-    		    <img src="https://github.com/samdbeckham/blog/blob/master/dev/_assets/images/articles/firewatch/layer_3.png?raw=true" />
+				<img src="https://github.com/samdbeckham/blog/blob/master/dev/_assets/images/articles/firewatch/layer_3.png?raw=true" />
     		</div>
     		<div class="parallax__layer parallax__layer__4">
-    		    <img src="https://github.com/samdbeckham/blog/blob/master/dev/_assets/images/articles/firewatch/layer_4.png?raw=true" />
+				<img src="https://github.com/samdbeckham/blog/blob/master/dev/_assets/images/articles/firewatch/layer_4.png?raw=true" />
     		</div>
     		<div class="parallax__layer parallax__layer__5">
     		    <img src="https://github.com/samdbeckham/blog/blob/master/dev/_assets/images/articles/firewatch/layer_5.png?raw=true" />
@@ -104,28 +111,23 @@
 						<p>
 							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat exercitationem sequi quod, aspernatur corporis
 							fugit numquam fugiat asperiores minus fuga minima, veritatis natus, deleniti quia omnis soluta eius excepturi culpa!
-						</p><br>
+						</p><br><br>
 						<div class=body_button>
 							<div class="center">
-									<div class="outer button">
-										<a href="../views/login.php">START</a>
-										<span></span>
-										<span></span>
-									</div>
-									<div class="outer circle">
-										<a href="../views/login.php">START</a>
-										<span></span>
-										<span></span>
-									</div>
+								<div class="outer button">
+									<a href="../views/login.php">START</a>
+									<span></span>
+									<span></span>
 								</div>
 							</div>
 						</div>
-				</section>
+					</section>
 			</div> 
 		</div>
 		
 		<footer>
-
+			
 		</footer>
 		
     </body>
+</html>

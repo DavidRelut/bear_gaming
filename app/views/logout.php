@@ -1,11 +1,14 @@
-	<?php 
-
-		$title ="Bear Gaming | Logout";
-		$css = "../public/scss/logout/logout.css";
-		$js = "";
-		include("./includes/header.php"); 
-
-	?> 
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<link rel="shortcut icon" type="image/png" href="../public/images/favicon.png"/>
+		<?php 
+			$title ="Bear Gaming | Logout";
+			$css = "../public/scss/logout/logout.css";
+			$js = "";
+			include("./includes/header.php"); 
+		?> 
+    </head>	
 
     <body>
         <?php 
@@ -27,3 +30,4 @@
 			<source src="../public/videos/arcade_night.mp4"></source>
 		</video>
     </body>
+</html>
