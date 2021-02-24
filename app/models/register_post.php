@@ -1,7 +1,7 @@
 
 	<?php 
 
-		$title ="Bear Gaming | Login";
+		$title ="Bear Gaming";
 		$css = "";
 		$js = "";
 		include("../views/includes/header.php"); 

@@ -1,0 +1,120 @@
+@import '../reset';
+@import '../variables';
+
+* {
+  // font-family: 'Roboto Condensed', sans-serif;
+  font-family: 'DotGothic16', sans-serif;
+}
+
+body {
+  //   position: relative;
+  font-family: 'DotGothic16', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+video {
+  height: 100vh;
+  width: 100%;
+  //   position: absolute;
+  position: initial;
+  // z-index: 1;
+  object-fit: cover;
+}
+
+// NEON EFFECT
+
+.box {
+  position: absolute;
+  width: 18.7rem;
+  height: 10.75rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+p {
+  position: absolute;
+  // z-index: 10;
+  font-size: 2rem;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  color: $fushia;
+  text-shadow: 0 0 10px #d80094, 0 0 20px #d80094, 0 0 40px #d80094,
+    0 0 80px #d80094, 0 0 120px #d80094;
+}
+
+.lightbar {
+  position: relative;
+  top: 0%;
+  left: 0%;
+  z-index: 10;
+  width: 10px;
+  height: 100%;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 0 10px #d80094, 0 0 20px #d80094, 0 0 40px #d80094,
+    0 0 80px #d80094, 0 0 120px #d80094;
+  animation: animatelightbar 3s linear infinite;
+}
+
+@keyframes animatelightbar {
+  0%,
+  5% {
+    transform: scaleY(0) translateX(0);
+  }
+  10% {
+    transform: scaleY(1) translateX(0);
+  }
+  90% {
+    transform: scaleY(1) translateX(calc(18.7rem - 10px));
+  }
+  95%,
+  100% {
+    transform: scaleY(0) translateX(calc(18.7rem - 10px));
+  }
+}
+
+.topLayer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+  // background-color: #0d0f17;
+  // backdrop-filter: blur(8px);
+  animation: animatetopLayer 6s linear infinite;
+}
+
+@keyframes animatetopLayer {
+  0%,
+  2.5% {
+    transform: translateX(0);
+  }
+  5% {
+    transform: translateX(0);
+  }
+  45% {
+    transform: translateX(100%);
+  }
+  47.5%,
+  50% {
+    transform: translateX(100%);
+  }
+  50.001%,
+  52.5% {
+    transform: translateX(-100%);
+  }
+  55% {
+    transform: translateX(-100%);
+  }
+  95% {
+    transform: translateX(0%);
+  }
+  97.5%,
+  100% {
+    transform: translateX(0%);
+  }
+}

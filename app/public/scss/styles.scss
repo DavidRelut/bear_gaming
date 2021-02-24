@@ -1,10 +1,233 @@
-@import './reset';
+// @import './reset';
 @import './variables';
 
 * {
-  font-family: 'Roboto Condensed', sans-serif;
+  // font-family: 'Roboto Condensed', sans-serif;
+  font-family: 'DotGothic16', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  background-color: $bg;
+  //   position: relative;
+  font-family: 'DotGothic16', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  position: sticky;
+  height: 20vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+//-------------------------------------------------------
+// PARALLAX EFFECT
+
+html,
+body {
+  background-color: #fedcc8;
+  // background-color: #000;
+}
+
+.parallax {
+  perspective: 100px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 0;
+  bottom: 0;
+  margin-left: -1500px;
+}
+
+.parallax__layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  img {
+    display: block;
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+.parallax__cover {
+  background: #2d112b;
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  // height: 125rem;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+$parallax__layers: 6;
+
+@for $i from 0 through $parallax__layers {
+  $x: ($parallax__layers - $i) / 2;
+  .parallax__layer__#{$i} {
+    transform: translateZ(-100px * $x) scale($x + 1);
+  }
+}
+
+//--------------------------------------------------------
+// SECTION
+
+section {
+  position: relative;
+  width: 100%;
+  height: 110vh;
+  /* bottom: 25%; */
+  left: 19%;
+  background: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div#image-head.image-head {
+  position: absolute;
+  width: 90vw;
+  height: 80vh;
+  top: 25%;
+  // top: 10%;
+  // left: 50%;
+  background: no-repeat;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+}
+
+.about-us {
+  position: absolute;
+  width: 27rem;
+  right: 26%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+a.start {
+}
+
+// img .bg_arcade {
+//   z-index: 100;
+//   position: absolute;
+//   right: 10%;
+// }
+
+//--------------------------------------------------------
+// NEON EFFECT
+
+.box {
+  position: relative;
+  width: 26rem;
+  height: 6.75rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.neon {
+  position: absolute;
+  // z-index: 10;
+  font-size: 1.5rem;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  color: $fushia;
+  text-shadow: 0 0 10px #d80094, 0 0 20px #d80094, 0 0 40px #d80094,
+    0 0 80px #d80094, 0 0 120px #d80094;
+}
+
+.lightbar {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  z-index: 10;
+  width: 7px;
+
+  height: 100%;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 0 10px #d80094, 0 0 20px #d80094, 0 0 40px #d80094,
+    0 0 80px #d80094, 0 0 120px #d80094;
+  animation: animatelightbar 3s linear infinite;
+}
+
+@keyframes animatelightbar {
+  0%,
+  5% {
+    transform: scaleY(0) translateX(0);
+  }
+  10% {
+    transform: scaleY(1) translateX(0);
+  }
+  90% {
+    transform: scaleY(1) translateX(calc(26rem - 10px));
+  }
+  95%,
+  100% {
+    transform: scaleY(0) translateX(calc(26rem - 10px));
+  }
+}
+
+.topLayer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+  background: #fedcc8;
+  // mix-blend-mode: screen;
+  // backdrop-filter: blur(8px);
+  animation: animatetopLayer 6s linear infinite;
+}
+
+@keyframes animatetopLayer {
+  0%,
+  2.5% {
+    transform: translateX(0);
+  }
+  5% {
+    transform: translateX(0);
+  }
+  45% {
+    transform: translateX(100%);
+  }
+  47.5%,
+  50% {
+    transform: translateX(100%);
+  }
+  50.001%,
+  52.5% {
+    transform: translateX(-100%);
+  }
+  55% {
+    transform: translateX(-100%);
+  }
+  95% {
+    transform: translateX(0%);
+  }
+  97.5%,
+  100% {
+    transform: translateX(0%);
+  }
 }

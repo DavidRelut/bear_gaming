@@ -1,7 +1,7 @@
 	<?php 
 
 		$title ="Bear Gaming | Profile";
-        $css = "../public/scss/portal/portal.css";
+        $css = "../public/scss/profile/profile.css";
         $js = "";
 		include("./includes/header.php"); 
 
@@ -17,27 +17,58 @@
                 }
                 else {
                     $pseudo = $_COOKIE['existing_pseudo'];
+                    echo "You're logged in as $pseudo";
                     //  header('Location: profile.php');
 
             ?> 
         
+        
+                <a href="./logout.php">LOGOUT</a>
 
-            <!-- <img src="../public/images/pixelday2021-sorapoi-size.png"></img> -->
+                <?php
 
-            <a href="./logout.php">LOGOUT</a>
+                    include("../database/load_bdd.php");
+		            $bdd = connection_mysql(); 
+                    
+                    $pseudo = $_COOKIE['existing_pseudo'];
 
-                <!-- Changer de mot de passe ?
+                    #QUERY POUR RECUPERER LES INFOS PROFIL
+                    $query = $bdd->prepare("SELECT photo_profile, email, date_inscription FROM users WHERE pseudo=:pseudo");
+                    $query->execute(['pseudo'=>$pseudo]);
+                    $res = $query->fetch();
+                    $photo_profile = $res['photo_profile'];
+                    $email = $res['email'];
+                    $date_inscription = $res['date_inscription'];
 
-                Tapez votre mot de passe : <input type="text" name="last_password" required></input>
+                    # PRINT INFO PROFIL
+                    echo ("<br><br><a href='../views/portal.php'><img class='game' src = '. $photo_profile .'></a>");
+                    echo "<br><br><h1> Hello $pseudo ! Welcome to your PROFIL !</h1><br><br>";
+                    echo "<br><br><b> pseudo</b> : $pseudo";
+                    echo "<br><br><b> Your email:</b> : $email";
+                    echo "<br><br><b> Account created the : </b>  $date_inscription<br><br><br><br>";
 
-                Nouveau mot de passe : <input type="password" name="new_password" required></input>
+                    if (isset($_COOKIE['error_password_not_exist'])){
+                        echo "<p style='color:red';><b> Old password entered is incorrect.</br></p>";
 
-                <button type="submit" value="Change password"></button> -->
+                    }
+                    if(isset($_COOKIE['error_same_password'])){
+                    echo "<p style='color:red';><b> The new password is the same as the old !</b></p>";
 
+                    }
+                    if(isset($_COOKIE['update_password'])) {
+                        echo "<p style='color:green';><b> Your password has been properly modified !</br></p>";
+                    }
+                ?>
 
-
-            
-
+                    <form method="POST" action="../models/update_password_post.php">
+                        <label for="last_password">Type your last password:</label>
+                            <input type="password" id="last_password" name="last_password" required placeholder="last password"/> 
+                        <br /><br />
+                        <label for="password">New password:</label>
+                            <input type="password" id="new_password" name="new_password" required placeholder="New Password"/>
+                        <br /><br />
+                        <input type="submit" value="Change password" />          
+                    </form>
 
             <?php 
                 # CLOSING CURLY BRACKET OF ELSE FOR THE COOKIE OF SESSION

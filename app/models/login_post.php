@@ -1,7 +1,7 @@
 	<?php 
 
 		$css = "../public/scss/styles.css";
-		$title ="Bear Gaming | Login";
+		$title ="Bear Gaming";
 		include("../views/includes/header.php"); 
 
 	?> 

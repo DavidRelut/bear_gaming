@@ -7,7 +7,7 @@
 
 	?> 
     <head>
-        <link rel="shortcut icon" type="image/png" href="../../public/images/favicon.png"/>
+        <link rel="shortcut-icon" type="image/png" href="../public/images/favicon.png"/>
     </head>
 
         <?php 
@@ -26,67 +26,74 @@
 
             <header>
                 <ul>
-                    <li><a href="./playground.php">PLAYGROUND</a></li>
+                    <li><a href="./portal.php">HOME</a></li>
                     <li><a href="./profile.php">EDIT</a></li>
-                    <li><a href="./logout.php">LOGOUT</a><br></li>
+                    <li><a href="./logout.php"><img class="logout" src="../public/images/MultiversePlanetPortal.png" alt="logout"></a><br></li>
                 </ul>
-                <!-- <a href="./playground.php">PLAYGROUND</a>
-                <a href="./profile.php">EDIT</a>
-                <a href="./logout.php">LOGOUT</a><br> -->
             </header>
-            <form>
+            <!-- <form>
                 <input type="search" value="SEARCH" size=50></input>
-            </form>
+            </form> -->
             
-            <!-- <form method="POST" action="portal.php">
-                <input type="text" name="search_text" placeholder="Search a Game">
+            <form method="POST" action="portal.php">
+                <input type="text" name="search_text" placeholder="Search a Game" size=37>
                 <input type="submit" value="Search" name="search_products">
             </form>
 
+            <main>
+                <div class="container">
             <?php 
                 
                 # CONNECT TO DATABASE
-		        // include("../database/load_bdd.php");
-		        // $bdd = connection_mysql();
+		        include("../database/load_bdd.php");
+		        $bdd = connection_mysql();
 
-                # SI UNE RECHERCHE DE JEU A ETE EFFECTUE CLICK SUR SEARCH
-                // if(isset($_POST['search_products'])){
-                //     $search_text = $_POST ['search_text'];
-                //     echo $search_text;
+                # IF A GAME SEARCH WAS PERFORMED WITH CLICK ON SEARCH
+                if(isset($_POST['search_products'])){
+                    $search_text = $_POST['search_text'];
+                    $search_text = '%' . $search_text . '%';
 
-                //     # SEARCH IN DB LE JEU ASSOCIER A LA SEARCH
-                //     $req = $bdd->prepare('SELECT game, game_link, name, description FROM images WHERE name=:search_text').
-                //     $req->execute(['search_text'=>$search_text]);
-                // }
-            ?> -->
-
-            <main>
-                <div class="container">
-
-                    <?php 
-
-                    # CONNECT TO DATABASE
-		            include("../database/load_bdd.php");
-		            $bdd = connection_mysql();
-                    
-                    $req = $bdd->query("SELECT game, game_link, name, description FROM images LIMIT 10");
+                    # SEARCH IN DB FOR THE ASSOCIATED GAME
+                    $req = $bdd->prepare('SELECT game, game_link, name, description FROM images WHERE name LIKE :search_text');
+                    $req->execute(['search_text'=>$search_text]);
                     while($res = $req->fetch()){
-                        $game_link = $res['game_link'];
                         $game = $res['game'];
+                        $game_link = $res['game_link'];
                         $name = $res['name'];
                         $description = $res['description'];
-                        
-                        # LOAD INFORMATION GAME
-                        echo('<div class="card"><a href=' . $game_link . '><img class="game" src = '. $game .'></a><br>');
+
+                        # LOAD GAME SEARCH INFORMATION
+                        echo('<div class="card card_search"><a href=' . $game_link . '><img class="game" src = '. $game .'></a><br>');
                         echo('<p class="game_name">' . $name . '</p><br>');
                         echo('<p class="game_description">' . $description . '</p><br><hr></div>');
                     }
+                }
+                else {
+
+                ?>
+
+
+                    <?php 
+
+                        $req = $bdd->query("SELECT game, game_link, name, description FROM images LIMIT 10");
+                        while($res = $req->fetch()){
+                            $game = $res['game'];
+                            $game_link = $res['game_link'];
+                            $name = $res['name'];
+                            $description = $res['description'];
+                        
+                        # LOAD INFORMATION GAME
+                        echo('<div class="card"><a href=' . $game_link . ' target="_blank"><img class="game" src = '. $game .'></a><br>');
+                        echo('<p class="game_name">' . $name . '</p><br>');
+                        echo('<p class="game_description">' . $description . '</p><br><hr></div>');
+                        }
                     ?>
 
                 </div>
             </main>   
 
             <?php 
+                }
                 # CLOSING CURLY BRACKET OF ELSE FOR THE COOKIE OF SESSION   
             }
             ?>

@@ -1,0 +1,290 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Primary colors */
+/* Theme color */
+/* Error connect */
+/* Valid connect */
+/* Acceuil */
+* {
+  font-family: "DotGothic16", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+}
+
+section {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: #111;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+section .row {
+  position: relative;
+  top: -60%;
+  width: 100%;
+  display: flex;
+  padding: 10px 0;
+  white-space: nowrap;
+  font-size: 4rem;
+  transform: rotate(-30deg);
+}
+
+i {
+  color: rgba(0, 0, 0, 0.5);
+  transition: 1s;
+  padding: 0 5px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: default;
+}
+
+i:hover {
+  transition: 0s;
+  color: #ff4800;
+  text-shadow: 0 0 7.5rem #ff4800;
+}
+
+section .row div {
+  -webkit-animation: animate1 80s linear infinite;
+          animation: animate1 80s linear infinite;
+  -webkit-animation-delay: -80s;
+          animation-delay: -80s;
+}
+
+section .row div:nth-child(2) {
+  -webkit-animation: animate2 80s linear infinite;
+          animation: animate2 80s linear infinite;
+  -webkit-animation-delay: -40s;
+          animation-delay: -40s;
+}
+
+@-webkit-keyframes animate1 {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes animate1 {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@-webkit-keyframes animate2 {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-200%);
+  }
+}
+@keyframes animate2 {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-200%);
+  }
+}
+section .row:nth-child(even) div {
+  -webkit-animation: animate3 80s linear infinite;
+          animation: animate3 80s linear infinite;
+  -webkit-animation-delay: -80s;
+          animation-delay: -80s;
+}
+
+section .row:nth-child(even) div:nth-child(2) {
+  -webkit-animation: animate4 80s linear infinite;
+          animation: animate4 80s linear infinite;
+  -webkit-animation-delay: -40s;
+          animation-delay: -40s;
+}
+
+@-webkit-keyframes animate3 {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes animate3 {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+@-webkit-keyframes animate4 {
+  0% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes animate4 {
+  0% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+form {
+  position: absolute;
+}/*# sourceMappingURL=login.css.map */

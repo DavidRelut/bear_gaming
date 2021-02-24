@@ -1,0 +1,19 @@
+@import '../reset';
+@import '../variables';
+
+* {
+  // font-family: 'Roboto Condensed', sans-serif;
+  font-family: 'DotGothic16', sans-serif;
+}
+
+body {
+  background-image: url(../../images/pixelday2021-sorapoi-size.png);
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+}
+
+form {
+  color: $orange;
+}
