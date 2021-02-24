@@ -105,8 +105,21 @@
 							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat exercitationem sequi quod, aspernatur corporis
 							fugit numquam fugiat asperiores minus fuga minima, veritatis natus, deleniti quia omnis soluta eius excepturi culpa!
 						</p><br>
-						<a class="start" href="../views/login.php"><button type="button">START</button></a>
-					</div>
+						<div class=body_button>
+							<div class="center">
+									<div class="outer button">
+										<a href="../views/login.php">START</a>
+										<span></span>
+										<span></span>
+									</div>
+									<div class="outer circle">
+										<a href="../views/login.php">START</a>
+										<span></span>
+										<span></span>
+									</div>
+								</div>
+							</div>
+						</div>
 				</section>
 			</div> 
 		</div>
