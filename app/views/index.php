@@ -43,9 +43,9 @@
 					<div id="image-head" class="image-head">
 						<script>
 							var images = [
+								"../public/images/image-head/arcade_home_bg.jpg",
 								"../public/images/image-head/mario_bg.jpg",
 								"../public/images/image-head/alienation.jpg",
-								"../public/images/image-head/arcade_home_bg.jpg",
 								"../public/images/image-head/assassins-creed-origins-pyramid.jpg",
 								"../public/images/image-head/assassins-creed-syndicate.jpg",
 								"../public/images/image-head/the-witcher.jpg",
