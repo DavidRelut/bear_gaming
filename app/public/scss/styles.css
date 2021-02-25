@@ -192,6 +192,11 @@ a {
 }
 
 .footer__social-networks a:nth-child(3):hover {
+  background-color: #339ecc;
+  border-color: #339ecc;
+}
+
+.footer__social-networks a:nth-child(4):hover {
   background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
 }
 
@@ -206,6 +211,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 .center {

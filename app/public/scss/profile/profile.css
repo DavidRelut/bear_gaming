@@ -143,29 +143,48 @@ table {
 }
 
 body {
-  background-image: url(../../images/pixelday2021-sorapoi-size.png);
-  background-attachment: scroll;
-  background-repeat: no-repeat;
-  background-size: cover;
-  text-align: center;
+  font-family: "DotGothic16", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+video {
+  height: 100vh;
+  width: 100%;
+  position: initial;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 form {
+  position: absolute;
+  top: 40%;
   color: #ff4800;
 }
 
 header {
+  position: absolute;
+  top: 0;
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
   font-size: 1rem;
   font-family: "DotGothic16", sans-serif;
   display: flex;
   justify-content: space-evenly;
-  height: 15vh;
+  width: 100vw;
+  height: 14vh;
   display: flex;
   align-items: center;
 }
 
+.logo {
+  height: 14vh;
+}
+
 .logout {
-  height: 12vh;
+  height: 10vh;
+  cursor: pointer;
 }
 
 ul {
@@ -174,9 +193,43 @@ ul {
 
 a {
   text-decoration: none;
-  color: #ffc600;
-  letter-spacing: 4px;
+  cursor: pointer;
 }
-a:hover {
-  color: white;
+
+.portal-a {
+  font-weight: bold;
+  color: #f3007b;
+  letter-spacing: 4px;
+  border-bottom-color: #f62f36;
+  padding: 8px;
+}
+.portal-a:hover {
+  color: #03a9f4;
+  background: linear-gradient(to bottom, rgba(246, 47, 54, 0) 66%, rgba(246, 47, 54, 0.35) 100%);
+}
+
+input {
+  font-family: "DotGothic16", sans-serif;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: chocolate;
+  font-size: 0.8rem;
+  font-weight: bold;
+  font: status-bar;
+  background-color: #222;
+  border-radius: 1rem;
+}
+input:focus {
+  outline: none;
+}
+
+input[type=password] {
+  font-size: 0.8rem;
+  font-family: "DotGothic16", sans-serif;
+}
+
+input[type=submit] {
+  font-size: 0.8rem;
+  font-family: "DotGothic16", sans-serif;
+  cursor: pointer;
 }/*# sourceMappingURL=profile.css.map */

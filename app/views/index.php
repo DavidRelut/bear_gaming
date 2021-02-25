@@ -130,10 +130,13 @@
 					<a href="https://dribbble.com/DavidR123" target="_blank">
 						<i class="fab fa-dribbble"></i>
 					</a>
+					<a href="https://www.linkedin.com/in/david-relut-839415202/" target="_blank">
+						<i class="fab fa-linkedin"></i>
+					</a>
 					<a href="https://www.instagram.com/" target="_blank">
 						<i class="fab fa-instagram"></i>
 					</a><br><br>
-					<p class="copyright-p">Copyright &#169; 2021 All Rights Reserved. By Bear Gaming.</p>
+					<p class="copyright-p">Copyright &#169; 2021 All Rights Reserved. By Kaito.</p>
 				</div>
 			</div> 
 		</div>

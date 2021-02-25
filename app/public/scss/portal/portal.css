@@ -155,19 +155,19 @@ header {
   font-family: "DotGothic16", sans-serif;
   display: flex;
   justify-content: space-evenly;
+  width: 100vw;
   height: 15vh;
   display: flex;
   align-items: center;
 }
 
 .logo {
-  position: absolute;
-  left: 2%;
-  height: 19vh;
+  height: 15vh;
 }
 
 .logout {
-  height: 12vh;
+  height: 11vh;
+  cursor: pointer;
 }
 
 ul {
@@ -176,11 +176,19 @@ ul {
 
 a {
   text-decoration: none;
-  color: #ffc600;
-  letter-spacing: 4px;
+  cursor: pointer;
 }
-a:hover {
-  color: white;
+
+.portal-a {
+  font-weight: bold;
+  color: #f3007b;
+  letter-spacing: 4px;
+  border-bottom-color: #f62f36;
+  padding: 8px;
+}
+.portal-a:hover {
+  color: #03a9f4;
+  background: linear-gradient(to bottom, rgba(246, 47, 54, 0) 66%, rgba(246, 47, 54, 0.35) 100%);
 }
 
 input {
@@ -206,6 +214,7 @@ input[type=text] {
 input[type=submit] {
   font-size: 0.8rem;
   font-family: "DotGothic16", sans-serif;
+  cursor: pointer;
 }
 
 .container {
@@ -216,16 +225,13 @@ input[type=submit] {
 
 .card {
   width: 17rem;
-  height: 81.5vh;
+  height: 35rem;
   display: inline-flex;
   flex-direction: column;
   text-align: center;
   border-radius: 20px;
   margin-bottom: 2rem;
   color: #f5deb3;
-}
-.card .card_search {
-  margin-right: 2rem;
 }
 .card:nth-child(odd) {
   background: #22222282;

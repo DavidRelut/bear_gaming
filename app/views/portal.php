@@ -25,9 +25,9 @@
         <header>
             <img class="logo" src="../public/images/favicon.png" alt="logo">
             <ul>
-                <li><a href="./portal.php" title="Home">HOME</a></li>
-                <li><a href="./profile.php" title="Profile">PROFILE</a></li>
-                <li><a href="./logout.php" title="Logout"><img class="logout" src="../public/images/MultiversePlanetPortal.png" alt="logout"></a><br></li>
+                <li><a class="portal-a" href="./portal.php" title="Home">HOME</a></li>
+                <li><a class="portal-a" href="./profile.php" title="Profile">PROFILE</a></li>
+                <li><a class="portal-a" href="./logout.php" title="Logout"><img class="logout" src="../public/images/MultiversePlanetPortal.png" alt="logout"></a><br></li>
             </ul>
         </header>
         
@@ -60,7 +60,7 @@
                              $description = $res['description'];
 
                              # LOAD GAME SEARCH INFORMATION
-                             echo('<div class="card card_search"><a href=' . $game_link . '><img class="game" src = '. $game .'></a><br>');
+                             echo('<div class="card"><a href=' . $game_link . '><img class="game" src = '. $game .'></a><br>');
                              echo('<p class="game_name">' . $name . '</p><br>');
                              echo('<p class="game_description">' . $description . '</p><br><hr></div>');
                          }
