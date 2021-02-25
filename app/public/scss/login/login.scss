@@ -136,16 +136,23 @@ form {
   transition: 0.5s;
 }
 
+// IN PHP BAD EMAIL OR PASSWORD
+span {
+  color: $red;
+  font-weight: bold;
+}
+
 .box .inputBox {
   position: relative;
+  outline: none;
+  background: transparent;
 }
 
 .box .inputBox input {
   width: 100%;
   padding: 10px 0;
-  font-size: 0.9rem;
-  color: #fff;
-
+  font-size: 0.8rem;
+  color: $wheat;
   letter-spacing: 1px;
   margin-bottom: 30px;
   border: none;
@@ -160,7 +167,8 @@ form {
   left: 0;
   letter-spacing: 1px;
   padding: 10px 0;
-  font-size: 1.1rem;
+  font-size: 1rem;
+  font-weight: bold;
   color: #fff;
   pointer-events: none;
   transition: 0.5s;
@@ -171,7 +179,10 @@ form {
   top: -18px;
   left: 0;
   color: $orange;
-  font-size: 1rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+  // outline: transparent;
+  // background: transparent;
 }
 
 .box button[type='submit'] {

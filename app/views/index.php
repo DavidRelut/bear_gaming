@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>	
-		<link rel="shortcut icon" type="image/png" href="../public/images/favicon.png"/>
+		<link rel="icon" href="../public/images/favicon.ico"/>
 		<?php 
 			$title ="Bear Gaming | Home";
 			$css = "../public/scss/styles.css";

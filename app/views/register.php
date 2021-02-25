@@ -13,16 +13,6 @@
 		
 
 	<body>
-
-		<p class="register_email-existing">
-			<?php 
-				if(isset($_COOKIE['error_register_existing_email'])){
-					echo "Already existing email or pseudo";
-				}
-			
-			?>
-		</p>
-		
 		<section>
 			<div class="row">
 				<div>
@@ -1008,6 +998,13 @@
 					<input type="password" name="password" required><br><br>
 					<Label>Password</label>
 				</div>
+
+				<?php 
+					if(isset($_COOKIE['error_register_existing_email'])){
+						echo "<span>Already existing email or pseudo</span><br><br>";
+					}
+				?>
+
 				<button type="submit" name="submit">REGISTER</button><br><br>
 				<a href="../views/login.php">Back to Login !</a>
 			</form>

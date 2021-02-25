@@ -34,7 +34,7 @@
 			# ERROR: BAD EMAIL !
 			if ($email_ok == 0){
 				setcookie('error_not_existing_email', true, time() + 3, '/');
-				header("Location: ../views/index.php");
+				header("Location: ../views/login.php");
 				// echo 'Any account is associated with this email';
 			} 
 			else {
@@ -49,7 +49,7 @@
 				if(!password_verify($password, $password_bdd))
 				{
 					setcookie('error_bad_password', true, time() + 3, '/');
-					header('Location: ../views/index.php');
+					header('Location: ../views/login.php');
 				}
 				
 				# GOOD PASSWORD

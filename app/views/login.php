@@ -13,16 +13,7 @@
 		
 	<body>
 
-		<?php 
-			#ERROR MESSAGE FOR PSEUDO AND PASSWORD
-			if(isset($_COOKIE['error_not_existing_email'])) {
-				echo 'Email or Password incorrect';
-			}	
-
-			if(isset($_COOKIE['error_bad_password'])) {
-				echo 'Email or Password incorrect';
-			}
-		?>
+	
 
 		<section>
 			<div class="row">
@@ -997,6 +988,18 @@
 					<input type="password" name="password"  required><br><br>
 					<label>Password</label>
 				</div>
+
+				<?php 
+					#ERROR MESSAGE FOR PSEUDO AND PASSWORD
+					if(isset($_COOKIE['error_not_existing_email'])) {
+						echo '<span>Email or Password incorrect<span><br><br>';
+					}	
+				
+					if(isset($_COOKIE['error_bad_password'])) {
+						echo '<span>Email or Password incorrect</span><br><br>';
+					}
+				?>
+
 				<button type="submit" name="submit">LOGIN</button><br><br>
 				<a href="../views/register.php">You have any account register here !</a>
 			</form>
