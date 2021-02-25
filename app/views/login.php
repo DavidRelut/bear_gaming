@@ -986,19 +986,20 @@
 				</div>
 			</div>
 		</section>
-		
-		<form method="POST" action="../models/login_post.php">
-			<input type="email" name="email" placeholder= "Enter email" required><br><br>
-			<input type="password" name="password" placeholder= "Enter password" required><br><br>
-			<button type="submit" name="submit">LOGIN</button><br><br>
-			<a href="../views/register.php">
-			<span></span>
-			<span></span>
-			<span></span>
-			<span></span>
-			You have any account register here !</a>
-		</form>
-	
 
+		<div id="box" class="box">
+			<form method="POST" action="../models/login_post.php">
+				<div class="inputBox">
+					<input type="email" name="email"  required><br><br>
+					<label>Email</label>
+				</div>
+				<div class="inputBox">
+					<input type="password" name="password"  required><br><br>
+					<label>Password</label>
+				</div>
+				<button type="submit" name="submit">LOGIN</button><br><br>
+				<a href="../views/register.php">You have any account register here !</a>
+			</form>
+		</div>
 	</body>
 </html>

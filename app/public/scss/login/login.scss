@@ -109,9 +109,84 @@ section .row:nth-child(even) div:nth-child(2) {
   }
 }
 
-form {
+//FORM
+
+.box {
   position: absolute;
+  width: 400px;
+  padding: 40px;
+  background: rgba(0, 0, 0, 8);
+  box-sizing: border-box;
+  box-shadow: 20px 15px 50px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+}
+
+// .box:hover .form {
+//   transform: translateY(0px);
+//   opacity: 1;
+// }
+
+form {
+  text-align: center;
+  // transform: translateY(100px);
+  // opacity: 0;
+  transition: 0.5s;
+}
+
+.box .inputBox {
+  position: relative;
+}
+
+.box .inputBox input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 0.9rem;
+  color: #fff;
+
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+
+.box .inputBox label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  letter-spacing: 1px;
+  padding: 10px 0;
+  font-size: 1.1rem;
+  color: #fff;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.box .inputBox input:focus ~ label,
+.box .inputBox input:valid ~ label {
+  top: -18px;
+  left: 0;
+  color: $orange;
+  font-size: 1rem;
+}
+
+.box button[type='submit'] {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: $wheat;
+  background: $orange;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
 }
 
 a {
+  text-decoration: none;
+  color: $wheat;
+  cursor: pointer;
 }

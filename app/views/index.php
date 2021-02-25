@@ -16,6 +16,7 @@
 	
     <body>
 		<header>
+			<img class="logo" src="../public/images/favicon.png" alt="logo">
 			<div class="box">
 				<div class="lightbar"></div>
 				<div class="topLayer"></div>
@@ -45,7 +46,6 @@
     		    <img src="https://github.com/samdbeckham/blog/blob/master/dev/_assets/images/articles/firewatch/layer_6.png?raw=true" />
     		</div>
     		<div class="parallax__cover">
-				<i class="fab fa-github"></i>
 				<section>
 					<div id="image-head" class="image-head">
 						<script>
@@ -108,26 +108,48 @@
 					</div>
 					<div class="about-us">
 						<h1>THE NUMBER ONE FOR THE NEW TOP GAMES</h1><br>
-						<p>
+						<p class="about_description">
 							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat exercitationem sequi quod, aspernatur corporis
 							fugit numquam fugiat asperiores minus fuga minima, veritatis natus, deleniti quia omnis soluta eius excepturi culpa!
 						</p><br><br>
 						<div class=body_button>
 							<div class="center">
 								<div class="outer button">
-									<a href="../views/login.php">START</a>
+									<a class="rainbow-button" href="../views/login.php">START</a>
 									<span></span>
 									<span></span>
 								</div>
 							</div>
 						</div>
-					</section>
+					</div>
+				</section>
+				<div class="footer__item footer__social-networks">
+					<a href="https://github.com/DavidRelut" target="_blank">
+						<i class="fab fa-github"></i>
+					</a>
+					<a href="https://dribbble.com/DavidR123" target="_blank">
+						<i class="fab fa-dribbble"></i>
+					</a>
+					<a href="https://www.instagram.com/" target="_blank">
+						<i class="fab fa-instagram"></i>
+					</a><br><br>
+					<p class="copyright-p">Copyright &#169; 2021 All Rights Reserved. By Bear Gaming.</p>
+				</div>
 			</div> 
 		</div>
 		
-		<footer>
-			
-		</footer>
-		
+<!-- 
+		<div class="footer__item footer__social-networks">
+            <a href="#">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+		 -->
     </body>
 </html>

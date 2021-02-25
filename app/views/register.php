@@ -986,17 +986,32 @@
 			</div>
 		</section>
 
-
-		<form method="POST" action="../models/register_post.php">
-			<input type="text" name="pseudo" placeholder= "Enter pseudo" required><br><br>
-			<input type="email" name="email" placeholder= "Enter email" required><br><br>
-			<input type="text" name="firstname" placeholder= "Enter First name" required><br><br>
-			<input type="text" name="lastname" placeholder= "Enter Last name" required><br><br>
-			<input type="password" name="password" placeholder= "Enter password" required><br><br>
-			<button type="submit" name="submit">REGISTER</button><br><br>
-			<a href="../views/login.php">Back to Login !</a>
-		</form>
-
+		<div id="box" class="box">
+			<form method="POST" action="../models/register_post.php">
+				<div class="inputBox">
+					<input type="text" name="pseudo" required><br><br>
+					<Label>Pseudo</label>
+				</div>
+				<div class="inputBox">
+					<input type="email" name="email" required><br><br>
+					<Label>Email</label>
+				</div>
+				<div class="inputBox">
+					<input type="text" name="firstname" required><br><br>
+					<Label>First Name</label>
+				</div>
+				<div class="inputBox">
+					<input type="text" name="lastname" required><br><br>
+					<Label>Last Name</label>
+				</div>
+				<div class="inputBox">
+					<input type="password" name="password" required><br><br>
+					<Label>Password</label>
+				</div>
+				<button type="submit" name="submit">REGISTER</button><br><br>
+				<a href="../views/login.php">Back to Login !</a>
+			</form>
+		</div>		
 
 	
 	</body>

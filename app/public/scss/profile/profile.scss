@@ -17,3 +17,30 @@ body {
 form {
   color: $orange;
 }
+
+header {
+  font-size: 1rem;
+  font-family: 'DotGothic16', sans-serif;
+  display: flex;
+  justify-content: space-evenly;
+  height: 15vh;
+  display: flex;
+  align-items: center;
+}
+
+.logout {
+  height: 12vh;
+}
+
+ul {
+  display: contents;
+}
+
+a {
+  text-decoration: none;
+  color: $yellow_theme;
+  letter-spacing: 4px;
+  &:hover {
+    color: white;
+  }
+}

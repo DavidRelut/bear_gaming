@@ -49,7 +49,7 @@
 			$req->execute(['pseudo'=> $pseudo, 'email'=> $email, 'firstname'=> $firstname, 'lastname'=> $lastname, 'password'=> $hash_password]);	
 			
 			echo 'Execution ok création du compte de ' . $pseudo;	
-			header('location: ../views/index.php');
+			header('location: ../views/login.php');
 
 		}
 

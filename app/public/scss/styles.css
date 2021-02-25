@@ -27,6 +27,12 @@ header {
   align-items: center;
 }
 
+.logo {
+  position: absolute;
+  left: 2%;
+  height: 19vh;
+}
+
 html,
 body {
   background-color: #fedcc8;
@@ -113,7 +119,7 @@ section {
 
 div#image-head.image-head {
   position: absolute;
-  width: 90vw;
+  width: 93vw;
   height: 80vh;
   top: 25%;
   background: no-repeat;
@@ -121,12 +127,72 @@ div#image-head.image-head {
 
 .about-us {
   position: absolute;
-  width: 27rem;
-  right: 26%;
+  width: 35rem;
+  right: 24%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+h1 {
+  color: #ffa500;
+  letter-spacing: 5px;
+  /* width: 40rem; */
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+.about_description {
+  letter-spacing: 1px;
+  padding-left: 8px;
+  color: #f5deb3;
+}
+
+.footer__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: fixed;
+  bottom: -106%;
+  right: 22%;
+  width: 28rem;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.footer__social-networks a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2rem;
+  width: 2rem;
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+  margin-left: 1rem;
+  transition: all 200ms ease-out;
+}
+
+.footer__social-networks a:hover {
+  transform: scale(1.25);
+}
+
+.footer__social-networks a:nth-child(1):hover {
+  background-color: #06090f;
+  border-color: #06090f;
+}
+
+.footer__social-networks a:nth-child(2):hover {
+  background-color: #ea4c7b;
+  border-color: #ea4c7b;
+}
+
+.footer__social-networks a:nth-child(3):hover {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
 }
 
 .body_button {
@@ -135,7 +201,7 @@ div#image-head.image-head {
   place-items: center;
 }
 
-a {
+.rainbow-button {
   text-decoration: none;
   display: flex;
   justify-content: center;
@@ -156,12 +222,12 @@ a {
 }
 
 .button {
-  height: 70px;
-  width: 220px;
+  height: 48px;
+  width: 208px;
   border-radius: 50px;
 }
 
-.outer a,
+.outer .rainbow-button,
 .outer span {
   position: absolute;
   top: 50%;
@@ -169,7 +235,7 @@ a {
   transform: translate(-50%, -50%);
 }
 
-.outer a {
+.outer .rainbow-button {
   background: #111;
   color: #f2f2f2;
   outline: none;
@@ -181,9 +247,10 @@ a {
   cursor: pointer;
 }
 
-.button a {
-  height: 60px;
-  width: 210px;
+.button .rainbow-button {
+  color: #ff4800;
+  height: 38px;
+  width: 198px;
   border-radius: 50px;
 }
 
@@ -206,7 +273,7 @@ a {
 }
 
 .outer:hover {
-  background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
+  background: linear-gradient(#00faff, #ff6600, #ff00e0);
   -webkit-animation: rotate 1.5s linear infinite;
           animation: rotate 1.5s linear infinite;
 }

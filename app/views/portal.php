@@ -5,7 +5,7 @@
 		<?php 
 		$title ="Bear Gaming | Portal";
         $css = "../public/scss/portal/portal.css";
-        $js = "";
+        $js = "../controllers/script.js";
 		include("./includes/header.php"); 
 	    ?>
 	</head>
@@ -17,16 +17,17 @@
         }
         else {
             $pseudo=$_COOKIE['existing_pseudo'];
-            echo "You're logged in as $pseudo";
+            // echo "You're logged in as $pseudo";
     ?> 
 
     <body>
             
         <header>
+            <img class="logo" src="../public/images/favicon.png" alt="logo">
             <ul>
-                <li><a href="./portal.php">HOME</a></li>
-                <li><a href="./profile.php">EDIT</a></li>
-                <li><a href="./logout.php"><img class="logout" src="../public/images/MultiversePlanetPortal.png" alt="logout"></a><br></li>
+                <li><a href="./portal.php" title="Home">HOME</a></li>
+                <li><a href="./profile.php" title="Profile">PROFILE</a></li>
+                <li><a href="./logout.php" title="Logout"><img class="logout" src="../public/images/MultiversePlanetPortal.png" alt="logout"></a><br></li>
             </ul>
         </header>
         
@@ -86,6 +87,16 @@
 
             </div>
         </main>   
+        <script type="text/javascript" src="vanilla-tilt.js"></script>
+		<script type="text/javascript">
+			VanillaTilt.init(document.querySelectorAll(".card"), {
+				max: 25,
+				speed: 400,
+				// glare: true,
+				// "max-glare": 2,
+			});
+		
+		</script>
 
         <?php 
             }

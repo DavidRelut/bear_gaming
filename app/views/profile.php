@@ -20,12 +20,17 @@
             }
             else {
                 $pseudo = $_COOKIE['existing_pseudo'];
-                echo "You're logged in as $pseudo";
+                // echo "You're logged in as $pseudo";
                 //  header('Location: profile.php');
         ?> 
-        
-        
-        <a href="./logout.php">LOGOUT</a>
+         <header>
+            <ul>
+                <li><a href="./portal.php" title="Home">HOME</a></li>
+                <li><a href="./profile.php" title="Profile">PROFILE</a></li>
+                <li><a href="./logout.php" title="Logout"><img class="logout" src="../public/images/MultiversePlanetPortal.png" alt="logout"></a><br></li>
+            </ul>
+        </header>
+
 
         <?php
             include("../database/load_bdd.php");
