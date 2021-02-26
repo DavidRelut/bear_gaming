@@ -157,24 +157,6 @@ video {
      object-fit: cover;
 }
 
-section {
-  position: absolute;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-wrap: nowrap;
-  width: 100vw;
-  height: 100vh;
-}
-
-.card-information {
-  height: 17.5rem;
-}
-
-.card-edit {
-  height: 17.5rem;
-}
-
 header {
   position: absolute;
   top: 0;
@@ -220,8 +202,27 @@ a {
   background: linear-gradient(to bottom, rgba(246, 47, 54, 0) 66%, rgba(246, 47, 54, 0.35) 100%);
 }
 
-form {
+section {
+  position: absolute;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 100vw;
+  height: 72vh;
+}
+
+.card-information {
+  height: 17.5rem;
+}
+
+span {
   color: #ff4800;
+  letter-spacing: 1px;
+}
+
+.card-edit {
+  height: 17.5rem;
 }
 
 input {

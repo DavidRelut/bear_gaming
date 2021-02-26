@@ -35,24 +35,6 @@ video {
   object-fit: cover;
 }
 
-section {
-  position: absolute;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-wrap: nowrap;
-  width: 100vw;
-  height: 100vh;
-}
-
-.card-information {
-  height: 17.5rem;
-}
-
-.card-edit {
-  height: 17.5rem;
-}
-
 header {
   position: absolute;
   top: 0;
@@ -102,10 +84,33 @@ a {
   }
 }
 
-form {
-  // position: absolute;
-  // top: 40%;
+section {
+  position: absolute;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 100vw;
+  height: 72vh;
+}
+
+// CARD INFORMATION
+.card-information {
+  height: 17.5rem;
+}
+
+span {
   color: $orange;
+  letter-spacing: 1px;
+}
+
+// CARD EDIT
+.card-edit {
+  height: 17.5rem;
+}
+
+form {
+  // color: $orange;
 }
 
 input {

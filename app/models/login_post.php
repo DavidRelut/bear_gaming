@@ -56,14 +56,15 @@
 				else 
 				{
 					# RETRIEVE PSEUDO ASSOCIATED WITH THE FORM EMAIL
-					$query = $bdd->prepare("SELECT pseudo FROM users WHERE email=:email");
+					$query = $bdd->prepare("SELECT email FROM users WHERE email=:email");
 					$query->execute(['email'=>$email]);
 					$res = $query->fetch();
 					$pseudo_cookie = $res['pseudo'];
+					$email_cookie = $res['email'];
 
 					# CREATE COOKIE USER SESSION
 					setcookie("existing_pseudo", $pseudo_cookie, time() + 48200, '/');
-					setcookie("existing_email", $email, time() + 48200, '/');
+					setcookie("existing_email", $email_cookie, time() + 48200, '/');
 
 					# REDIRECT TO PLAYGROUND PAGE
 					header("location: ../views/portal.php");

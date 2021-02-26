@@ -16,7 +16,7 @@
             header('refresh:3; url=index.php');
         }
         else {
-            $pseudo=$_COOKIE['existing_pseudo'];
+            $pseudo=$_COOKIE['existing_email'];
             // echo "You're logged in as $pseudo";
     ?> 
 
