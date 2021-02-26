@@ -4,7 +4,7 @@
 		<link rel="shortcut icon" type="image/png" href="../public/images/favicon.png"/>
 		<?php 
 		    $title ="Bear Gaming | Profile";
-            $css = "../public/scss/profile/profile.css";
+            $css = "../public/scss/card.css";
             $js = "../controllers/wScratchPad.min.js";
 		    include("./includes/header.php"); 
             ?> 
@@ -43,14 +43,11 @@
             </header>
                 
             <section>
-                <!-- <div class="cadre_info">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span> -->
+           
+
                     <div class="card-information">
-                    <h1>INFORMATION PROFILE</h1><br><br>
-                    <?php
+                        <h1>INFORMATION PROFILE</h1><br><br>
+                        <?php
                     include("../database/load_bdd.php");
 	                $bdd = connection_mysql(); 
 
@@ -73,30 +70,28 @@
                     }
                     if(isset($_COOKIE['error_same_password'])){
                         echo "<p style='color:red';><b> The new password is the same as the old !</b></p>";
-                    
+                        
                     }
                     if(isset($_COOKIE['update_password'])) {
                         echo "<p style='color:green';><b> Your password has been properly modified !</br></p>";
                     }
 
                     // PSEUDO ERROR MESSAGE
-
+                    
                     if (isset($_COOKIE['error_pseudo_not_exist'])){
                         echo "<p style='color:red';><b> Old pseudo entered is incorrect.</br></p>";
 
                     }
                     if(isset($_COOKIE['error_same_pseudo'])){
                         echo "<p style='color:red';><b> The new pseudo is the same as the old !</b></p>";
-                    
+                        
                     }
                     if(isset($_COOKIE['update_pseudo'])) {
                         echo "<p style='color:green';><b> Your pseudo has been properly modified !</br></p>";
                     }
                     ?>
-                    </div>
-                <!-- </div> -->
-
-                <div class="cadre_edit">
+                </div>
+                <div class="cadre">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -104,44 +99,44 @@
                     <div class=" card-edit">
                     <h1>EDIT PROFILE</h1><br><br>
                     <form method="POST" action="../models/update_pseudo_post.php">
-                        <div class="inputBox">
+                    <div class="inputBox">
                             <input type="text" id="last_pseudo" name="last_pseudo"  required placeholder="Last Pseudo"/><br><br>
                             <!-- <label for="last_pseudo">Type your last pseudo : </label> -->
                         </div>
-
+                        
                         <div class="inputBox">
                             <input type="text" id="new_pseudo" name="new_pseudo"  required placeholder="New Pseudo"/><br><br>
                             <!-- <label for="new_pseudo">New pseudo : </label> -->
                         </div>
-
+                        
                         <button type="submit" name="submit" >  
+                            <!-- <span></span>
                             <span></span>
                             <span></span>
                             <span></span>
-                            <span></span>
-                            <span></span>
+                            <span></span> -->
                             Update pseudo
                         </button>
                     </form>    
-
+                    
                     <br><hr><br>
 
                     <form method="POST" action="../models/update_password_post.php">
-                        <div class="inputBox">
+                    <div class="inputBox">
                             <input type="password" id="last_password" name="last_password" required placeholder="Last password"/><br><br>
                             <!-- <label for="last_password">Type your last password : </label> -->
                         </div>
-
+                        
                         <div class="inputBox">
                             <input type="password" id="new_password" name="new_password"  required placeholder="New Password"/><br><br>
                             <!-- <label for="password">New password : </label> -->
                         </div>
-
+                        
                         <button type="submit" name="submit" >                   
+                            <!-- <span></span>
                             <span></span>
                             <span></span>
-                            <span></span>
-                            <span></span>
+                            <span></span> -->
                             Update password
                         </button><br><br><br>          
                     </form>

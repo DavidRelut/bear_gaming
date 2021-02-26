@@ -16,7 +16,7 @@
 	
     <body>
 		<header>
-			<img class="logo" src="../public/images/favicon.png" alt="logo">
+			<!-- <img class="logo" src="../public/images/favicon.png" alt="logo"> -->
 			<div class="box">
 				<div class="lightbar"></div>
 				<div class="topLayer"></div>

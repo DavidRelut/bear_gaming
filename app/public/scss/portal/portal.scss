@@ -113,14 +113,14 @@ main {
 
   &:nth-child(odd) {
     background: #22222282;
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(6px);
     // box-shadow: 0 10px 25px rgb(233 30 99 / 60%);
     // box-shadow: 0 10px 25px #03a9f4;
   }
   &:nth-child(even) {
     background: #e91e6340;
     color: #e55516;
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(6px);
     color: $wheat;
     // box-shadow: 0 10px 25px #ff9800;
   }

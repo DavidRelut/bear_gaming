@@ -23,7 +23,7 @@
     <body>
             
         <header>
-            <img class="logo" src="../public/images/favicon.png" alt="logo">
+            <!-- <img class="logo" src="../public/images/favicon.png" alt="logo"> -->
             <ul>
                 <li><a class="portal-a" href="./portal.php" title="Home">HOME</a></li>
                 <li><a class="portal-a" href="./profile.php" title="Profile">PROFILE</a></li>

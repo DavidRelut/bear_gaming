@@ -981,11 +981,11 @@
 		<div id="box" class="box">
 			<form method="POST" action="../models/login_post.php">
 				<div class="inputBox">
-					<input type="email" name="email"  required><br><br>
+					<input type="email" name="email" required><br><br>
 					<label>Email</label>
 				</div>
 				<div class="inputBox">
-					<input type="password" name="password"  required><br><br>
+					<input type="password" name="password" required><br><br>
 					<label>Password</label>
 				</div>
 

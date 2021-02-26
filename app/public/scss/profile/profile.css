@@ -147,6 +147,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  box-sizing: border-box;
 }
 
 video {
@@ -210,43 +211,413 @@ section {
   flex-wrap: nowrap;
   width: 100vw;
   height: 72vh;
+  margin-top: 6rem;
 }
 
 .card-information {
-  height: 17.5rem;
+  text-align: center;
+  max-height: 29.5rem;
+  max-width: 35rem;
+  padding: 40px;
+  box-sizing: border-box;
+  background: #000000cc;
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
 }
 
 span {
-  color: #ff4800;
+  color: #f3007b;
   letter-spacing: 1px;
 }
 
-.card-edit {
-  height: 17.5rem;
+h1 {
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: wheat;
 }
 
-input {
+b {
+  color: aliceblue;
+  font-size: 0.9rem;
+}
+
+.card-edit {
+  width: 22rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 37rem;
+  padding: 40px;
+  box-sizing: border-box;
+  background: #000000cc;
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+}
+
+form {
   font-family: "DotGothic16", sans-serif;
   text-align: center;
-  margin-bottom: 2rem;
-  color: chocolate;
-  font-size: 0.8rem;
-  font-weight: bold;
-  font: status-bar;
-  background-color: #222;
-  border-radius: 1rem;
+  transition: 0.5s;
 }
-input:focus {
+
+.class-edit .inputBox {
+  position: relative;
+  outline: none;
+  background: transparent;
+}
+
+.card-edit .inputBox input {
+  width: 11rem;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+  font-size: 0.9rem;
+  color: #00e2ff;
+  border-bottom: 1.5px solid #fff;
+  outline: none;
+  background: transparent;
+  text-align: center;
+}
+
+.card-edit .inputBox label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  letter-spacing: 1px;
+  padding: 10px 0;
+  font-size: 1rem;
+  font-weight: bold;
+  pointer-events: none;
+  transition: 0.5s;
+  text-align: center;
+}
+
+.card-edit .inputBox input:focus ~ label,
+.card-edit .inputBox input:valid ~ label {
+  top: -18px;
+  left: 0;
+  font-size: 0.9rem;
+  font-weight: bold;
+  outline: transparent;
+  background: transparent;
+}
+
+.card-edit input::-moz-placeholder {
+  color: aliceblue;
+  font-family: "DotGothic16", sans-serif;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.card-edit input:-ms-input-placeholder {
+  color: aliceblue;
+  font-family: "DotGothic16", sans-serif;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.card-edit input::placeholder {
+  color: aliceblue;
+  font-family: "DotGothic16", sans-serif;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+  text-align: center;
+}
+.card-edit input::-moz-placeholder:hover {
+  background: linear-gradient(to bottom, rgba(246, 47, 54, 0) 66%, rgba(246, 47, 54, 0.35) 100%);
+}
+.card-edit input:-ms-input-placeholder:hover {
+  background: linear-gradient(to bottom, rgba(246, 47, 54, 0) 66%, rgba(246, 47, 54, 0.35) 100%);
+}
+.card-edit input::placeholder:hover {
+  background: linear-gradient(to bottom, rgba(246, 47, 54, 0) 66%, rgba(246, 47, 54, 0.35) 100%);
+}
+
+hr {
+  margin: 33px 0 21px 0;
+}
+
+.cadre_edit {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  color: #10ff00;
+  border: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 0.5s;
+  letter-spacing: 4px;
+  background: transparent;
+}
+.cadre_edit:focus {
   outline: none;
 }
 
-input[type=password] {
-  font-size: 0.8rem;
-  font-family: "DotGothic16", sans-serif;
+.cadre_edit span {
+  position: absolute;
+  display: block;
+  background: #10ff00;
+  z-index: 30;
 }
 
-input[type=submit] {
-  font-size: 0.8rem;
-  font-family: "DotGothic16", sans-serif;
+.cadre_edit span:nth-child(1) {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #10ff00);
+  -webkit-animation: animate_edit1 1s linear infinite;
+          animation: animate_edit1 1s linear infinite;
+}
+
+@-webkit-keyframes animate_edit1 {
+  0% {
+    left: -100%;
+  }
+  50%, 100% {
+    left: 100%;
+  }
+}
+
+@keyframes animate_edit1 {
+  0% {
+    left: -100%;
+  }
+  50%, 100% {
+    left: 100%;
+  }
+}
+.cadre_edit span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #10ff00);
+  -webkit-animation: animate_edit2 2s linear infinite;
+          animation: animate_edit2 2s linear infinite;
+  -webkit-animation-delay: 0.25s;
+          animation-delay: 0.25s;
+}
+
+@-webkit-keyframes animate_edit2 {
+  0% {
+    top: -100%;
+  }
+  50%, 100% {
+    top: 100%;
+  }
+}
+
+@keyframes animate_edit2 {
+  0% {
+    top: -100%;
+  }
+  50%, 100% {
+    top: 100%;
+  }
+}
+.cadre_edit span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #10ff00);
+  -webkit-animation: animate_edit3 1s linear infinite;
+          animation: animate_edit3 1s linear infinite;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+@-webkit-keyframes animate_edit3 {
+  0% {
+    right: -100%;
+  }
+  50%, 100% {
+    right: 100%;
+  }
+}
+
+@keyframes animate_edit3 {
+  0% {
+    right: -100%;
+  }
+  50%, 100% {
+    right: 100%;
+  }
+}
+.cadre_edit span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #10ff00);
+  -webkit-animation: animate_edit4 1s linear infinite;
+          animation: animate_edit4 1s linear infinite;
+  -webkit-animation-delay: 0.75s;
+          animation-delay: 0.75s;
+}
+
+@-webkit-keyframes animate_edit4 {
+  0% {
+    bottom: -100%;
+  }
+  50%, 100% {
+    bottom: 100%;
+  }
+}
+
+@keyframes animate_edit4 {
+  0% {
+    bottom: -100%;
+  }
+  50%, 100% {
+    bottom: 100%;
+  }
+}
+button {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
   cursor: pointer;
+  border-radius: 5px;
+  color: #10ff00;
+  border: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 0.5s;
+  letter-spacing: 4px;
+  background: transparent;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+}
+button:focus {
+  outline: none;
+}
+button:hover {
+  background: #10ff00;
+  color: #050801;
+  box-shadow: 0 0 5px #10ff00, 0 0 25px #10ff00, 0 0 50px #10ff00, 0 0 200px #10ff00;
+}
+
+button span {
+  position: absolute;
+  display: block;
+}
+
+button span:nth-child(1) {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #10ff00);
+  -webkit-animation: animate1 1s linear infinite;
+          animation: animate1 1s linear infinite;
+}
+
+@-webkit-keyframes animate1 {
+  0% {
+    left: -100%;
+  }
+  50%, 100% {
+    left: 100%;
+  }
+}
+
+@keyframes animate1 {
+  0% {
+    left: -100%;
+  }
+  50%, 100% {
+    left: 100%;
+  }
+}
+button span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #10ff00);
+  -webkit-animation: animate2 2s linear infinite;
+          animation: animate2 2s linear infinite;
+  -webkit-animation-delay: 0.25s;
+          animation-delay: 0.25s;
+}
+
+@-webkit-keyframes animate2 {
+  0% {
+    top: -100%;
+  }
+  50%, 100% {
+    top: 100%;
+  }
+}
+
+@keyframes animate2 {
+  0% {
+    top: -100%;
+  }
+  50%, 100% {
+    top: 100%;
+  }
+}
+button span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #10ff00);
+  -webkit-animation: animate3 1s linear infinite;
+          animation: animate3 1s linear infinite;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+@-webkit-keyframes animate3 {
+  0% {
+    right: -100%;
+  }
+  50%, 100% {
+    right: 100%;
+  }
+}
+
+@keyframes animate3 {
+  0% {
+    right: -100%;
+  }
+  50%, 100% {
+    right: 100%;
+  }
+}
+button span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #10ff00);
+  -webkit-animation: animate4 1s linear infinite;
+          animation: animate4 1s linear infinite;
+  -webkit-animation-delay: 0.75s;
+          animation-delay: 0.75s;
+}
+
+@-webkit-keyframes animate4 {
+  0% {
+    bottom: -100%;
+  }
+  50%, 100% {
+    bottom: 100%;
+  }
+}
+
+@keyframes animate4 {
+  0% {
+    bottom: -100%;
+  }
+  50%, 100% {
+    bottom: 100%;
+  }
 }/*# sourceMappingURL=profile.css.map */
