@@ -998,9 +998,12 @@
 					if(isset($_COOKIE['error_bad_password'])) {
 						echo '<span>Email or Password incorrect</span><br><br>';
 					}
-				?>
+				?> 
 
-				<button type="submit" name="submit">LOGIN</button><br><br>
+					<button class="cybr-btn" type="submit" name="submit">
+						<span aria-hidden class="cybr-btn__glitch">LOGIN_</span>
+						<span aria-hidden class="cybr-btn__tag">R25</span>
+					</button><br><br>
 				<a href="../views/register.php">You have any account register here !</a>
 			</form>
 		</div>

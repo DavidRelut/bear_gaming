@@ -1004,8 +1004,10 @@
 						echo "<span>Already existing email or pseudo</span><br><br>";
 					}
 				?>
-
-				<button type="submit" name="submit">REGISTER</button><br><br>
+				<button class="cybr-btn" type="submit" name="submit">
+						<span aria-hidden class="cybr-btn__glitch">REGISTER_</span>
+						<span aria-hidden class="cybr-btn__tag">R25</span>
+					</button><br><br>
 				<a href="../views/login.php">Back to Login !</a>
 			</form>
 		</div>		
