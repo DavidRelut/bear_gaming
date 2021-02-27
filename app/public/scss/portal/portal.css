@@ -140,8 +140,13 @@ table {
 /* Error connect */
 /* Valid connect */
 /* Acceuil */
+@font-face {
+  font-family: Cyber;
+  src: url("https://assets.codepen.io/605876/Blender-Pro-Bold.otf");
+  font-display: swap;
+}
 * {
-  font-family: "DotGothic16", sans-serif;
+  font-family: "Cyber", sans-serif;
 }
 
 body {
@@ -154,7 +159,7 @@ body {
 
 header {
   font-size: 1rem;
-  font-family: "DotGothic16", sans-serif;
+  font-family: "Cyber", sans-serif;
   display: flex;
   justify-content: space-evenly;
   width: 100vw;
@@ -174,6 +179,7 @@ header {
 
 ul {
   display: contents;
+  font-family: "Cyber", sans-serif;
 }
 
 a {
@@ -188,6 +194,7 @@ a {
   letter-spacing: 4px;
   border-bottom-color: #f62f36;
   padding: 8px;
+  font-size: 1.3rem;
 }
 .portal-a:hover {
   color: #03a9f4;
@@ -195,11 +202,11 @@ a {
 }
 
 input {
-  font-family: "DotGothic16", sans-serif;
+  font-family: "Cyber", sans-serif;
   text-align: center;
   margin-bottom: 2rem;
   color: chocolate;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   font-weight: bold;
   font: status-bar;
   background-color: #222;
@@ -210,13 +217,13 @@ input:focus {
 }
 
 input[type=text] {
-  font-size: 0.8rem;
-  font-family: "DotGothic16", sans-serif;
+  font-size: 0.9rem;
+  font-family: "Cyber", sans-serif;
 }
 
 input[type=submit] {
-  font-size: 0.8rem;
-  font-family: "DotGothic16", sans-serif;
+  font-size: 0.9rem;
+  font-family: "Cyber", sans-serif;
   cursor: pointer;
 }
 
@@ -259,13 +266,13 @@ input[type=submit] {
   width: 17rem;
   text-align: center;
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   color: #ffc600;
 }
 
 .game_description {
-  font-size: 0.8rem;
-  font-family: "DotGothic16", sans-serif;
+  font-size: 1rem;
+  font-family: "Cyber", sans-serif;
   width: 17rem;
 }
 
@@ -301,6 +308,7 @@ footer {
 
 .copyright-p {
   color: #ffffff;
+  font-family: "Cyber", sans-serif;
 }
 
 .footer__item {

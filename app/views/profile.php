@@ -62,9 +62,9 @@
                     $date_inscription = $res['date_inscription'];
 
                     # PRINT PROFILE INFORMATION
-                    echo "<b>Your pseudo is :</b><span> $pseudo</span>";
-                    echo "<br><br><b> Your email is :</b><span> $email</span>";
-                    echo "<br><br><b> Account created the :</b><span> $date_inscription</span><br><br><br><br>";
+                    echo "<b class='info_profile'>Your pseudo is :</b><span> $pseudo</span>";
+                    echo "<br><br><b class='info_profile'> Your email is :</b><span> $email</span>";
+                    echo "<br><br><b class='info_profile'> Account created the :</b><span> $date_inscription</span><br><br><br><br>";
 
                     // PASSWORD ERROR MESSAGE
                     if (isset($_COOKIE['error_password_not_exist'])){

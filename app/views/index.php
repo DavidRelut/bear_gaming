@@ -111,6 +111,8 @@
 						<p class="about_description">
 							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat exercitationem sequi quod, aspernatur corporis
 							fugit numquam fugiat asperiores minus fuga minima, veritatis natus, deleniti quia omnis soluta eius excepturi culpa!
+
+							
 						</p><br><br>
 						<div class=body_button>
 							<div class="center">

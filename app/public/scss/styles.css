@@ -5,6 +5,11 @@
 /* Error connect */
 /* Valid connect */
 /* Acceuil */
+@font-face {
+  font-family: Cyber;
+  src: url("https://assets.codepen.io/605876/Blender-Pro-Bold.otf");
+  font-display: swap;
+}
 * {
   font-family: "DotGothic16", sans-serif;
   box-sizing: border-box;
@@ -151,6 +156,12 @@ h1 {
   color: #f5deb3;
 }
 
+.copyright-p {
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-family: "Cyber", sans-serif;
+}
+
 .footer__item {
   display: flex;
   justify-content: center;
@@ -209,6 +220,7 @@ a {
 }
 
 .rainbow-button {
+  font-family: "Cyber", sans-serif;
   text-decoration: none;
   display: flex;
   justify-content: center;

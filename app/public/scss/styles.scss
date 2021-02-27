@@ -1,9 +1,16 @@
 // @import './reset';
 @import './variables';
 
+@font-face {
+  font-family: Cyber;
+  src: url('https://assets.codepen.io/605876/Blender-Pro-Bold.otf');
+  font-display: swap;
+}
+
 * {
   // font-family: 'Roboto Condensed', sans-serif;
   font-family: 'DotGothic16', sans-serif;
+  // font-family: 'Cyber', sans-serif;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -11,6 +18,7 @@
 
 body {
   //   position: relative;
+  // font-family: 'Cyber', sans-serif;
   font-family: 'DotGothic16', sans-serif;
   display: flex;
   justify-content: center;
@@ -148,6 +156,12 @@ h1 {
 
 //SOCIAL NETWORK
 
+.copyright-p {
+  color: $white;
+  font-size: 1.1rem;
+  font-family: 'Cyber', sans-serif;
+}
+
 .footer__item {
   display: flex;
   justify-content: center;
@@ -220,6 +234,7 @@ a {
 }
 
 .rainbow-button {
+  font-family: 'Cyber', sans-serif;
   text-decoration: none;
   display: flex;
   justify-content: center;
