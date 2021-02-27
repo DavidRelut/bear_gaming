@@ -276,28 +276,6 @@ input[type=submit] {
   width: 17rem;
 }
 
-hr {
-  border: none;
-  border-top: 3px double #333;
-  color: #333;
-  overflow: visible;
-  text-align: center;
-  height: 5px;
-  width: 17rem;
-  position: absolute;
-  bottom: 1%;
-}
-
-hr:after {
-  background: #000;
-  content: "Bear Gaming";
-  color: #ff4800;
-  padding: 0 4px;
-  position: relative;
-  top: -9px;
-  border-radius: 5px;
-}
-
 footer {
   display: flex;
   justify-content: center;
