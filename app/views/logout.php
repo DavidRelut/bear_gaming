@@ -27,7 +27,7 @@
 		<!-- </div> -->
 
 		<video autoplay muted loop>
-			<source src="../public/videos/arcade_night.mp4"></source>
+			<source src="https://res.cloudinary.com/dav123789/video/upload/v1614441653/Bear_Gaming%20images/video/arcade_night_qkfagg.mp4"></source>
 		</video>
     </body>
 </html>

@@ -30,7 +30,7 @@
         ?> 
 
             <video autoplay muted loop>
-                <source src="../public/videos/fairy_forest.mp4"></source>
+                <source src="https://res.cloudinary.com/dav123789/video/upload/v1614441655/Bear_Gaming%20images/video/fairy_forest_gbopgt.mp4"></source>
             </video>
                 
             <header>
