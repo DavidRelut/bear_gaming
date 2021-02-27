@@ -12,6 +12,7 @@
 
 			<link rel="stylesheet" href=<?php echo $css ?>>
 			<script type="text/javascript" src=<?php echo $js ?>></script>
+			<!-- <script type="text/javascript" src="../../controllers/script.js"></script> -->
 			<script src="https://kit.fontawesome.com/dca83d2092.js" crossorigin="anonymous"></script>
 			
     	    <title><?php echo $title ?></title>

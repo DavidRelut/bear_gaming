@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-	 <head>
+    <head>
 		<link rel="shortcut icon" type="image/png" href="../public/images/favicon.png"/>
+		
 		<?php 
 			$title ="Bear Gaming | Register";
-			$css = "../public/scss/register/register.css";
+			$css = "../public/scss/register/register_basic_theme/register_basic_theme.css";
 			$js = "../controllers/script.js";
 			include("./includes/header.php"); 
-		?>
-    </head>	
- 
+		?> 
+    </head>
 		
-
 	<body>
 
 		<div class="center">
-			<input id="changeTheme" type="checkbox" name="theme" title="Go to Basic Theme">
+			<input id="changeTheme" type="checkbox" name="theme" title="Go to Current Theme">
     	</div>
-		
+
 		<!-- CHANGE THEME FOR PAGE LOGIN REGISTER -> THEME BASIC OR OF MOMENT -->
 		<script>
 			document.querySelector("#changeTheme").addEventListener("click", () => {
 				setInterval(() => {
-					window.location.href = './register_basic_theme.php';
+					window.location.href = './register.php';
 				}, 850);
 			})
 		</script>
+
 
 		<section>
 			<div class="row">
@@ -991,41 +991,30 @@
 		</section>
 
 		<div id="box" class="box">
-			<form method="POST" action="../models/register_post.php">
-				<div class="inputBox">
-					<input type="text" name="pseudo" required><br><br>
-					<Label>Pseudo</label>
-				</div>
+			<form method="POST" action="../models/login_post.php">
 				<div class="inputBox">
 					<input type="email" name="email" required><br><br>
-					<Label>Email</label>
-				</div>
-				<div class="inputBox">
-					<input type="text" name="firstname" required><br><br>
-					<Label>First Name</label>
-				</div>
-				<div class="inputBox">
-					<input type="text" name="lastname" required><br><br>
-					<Label>Last Name</label>
+					<label>Email</label>
 				</div>
 				<div class="inputBox">
 					<input type="password" name="password" required><br><br>
-					<Label>Password</label>
+					<label>Password</label>
 				</div>
 
 				<?php 
-					if(isset($_COOKIE['error_register_existing_email'])){
-						echo "<span>Already existing email or pseudo</span><br><br>";
+					#ERROR MESSAGE FOR PSEUDO AND PASSWORD
+					if(isset($_COOKIE['error_not_existing_email'])) {
+						echo '<span>Email or Password incorrect<span><br><br>';
+					}	
+				
+					if(isset($_COOKIE['error_bad_password'])) {
+						echo '<span>Email or Password incorrect</span><br><br>';
 					}
-				?>
-				<button class="cybr-btn" type="submit" name="submit">
-						<span aria-hidden class="cybr-btn__glitch">REGISTER_</span>
-						<span aria-hidden class="cybr-btn__tag">R25</span>
-					</button><br><br>
-				<a href="../views/login.php">Back to Login !</a>
-			</form>
-		</div>		
+				?> 
 
-	
+				<button type="submit" name="submit">REGISTER</button><br><br>
+				<a href="../views/login_basic_theme.php">You have any account register here !</a>
+			</form>
+		</div>
 	</body>
 </html>

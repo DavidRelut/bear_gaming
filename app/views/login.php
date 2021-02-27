@@ -13,7 +13,18 @@
 		
 	<body>
 
-	
+		<div class="center">
+			<input id="changeTheme" type="checkbox" name="theme" title="Go to Basic Theme">
+    	</div>
+		
+		<!-- CHANGE THEME FOR PAGE LOGIN REGISTER -> THEME BASIC OR OF MOMENT -->
+		<script>
+			document.querySelector("#changeTheme").addEventListener("click", () => {
+				setInterval(() => {
+					window.location.href = './login_basic_theme.php';
+				}, 850);
+			})
+		</script>
 
 		<section>
 			<div class="row">

@@ -5,7 +5,7 @@
 		<?php 
 		$title ="Bear Gaming | Portal";
         $css = "../public/scss/portal/portal.css";
-        $js = "../controllers/script.js";
+        $js = "../controllers/vanillaTilt.js";
 		include("./includes/header.php"); 
 	    ?>
 	</head>
@@ -86,7 +86,9 @@
                 ?>
 
             </div>
-        </main>   
+        </main>
+
+        <!-- USE FUNCTION FOR CARD EFFECT TO PAGE PORTAL -->
         <script type="text/javascript" src="vanilla-tilt.js"></script>
 		<script type="text/javascript">
 			VanillaTilt.init(document.querySelectorAll(".card"), {
