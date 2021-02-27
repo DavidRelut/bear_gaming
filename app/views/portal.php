@@ -62,7 +62,7 @@
                              # LOAD GAME SEARCH INFORMATION
                              echo('<div class="card"><a href=' . $game_link . '><img class="game" src = '. $game .'></a><br>');
                              echo('<p class="game_name">' . $name . '</p><br>');
-                             echo('<p class="game_description">' . $description . '</p><br><hr></div>');
+                             echo('<p class="game_description">' . $description . '</p><br></div>');
                          }
                      }
                      else {
@@ -81,7 +81,7 @@
                     # LOAD INFORMATION GAME
                     echo('<div class="card"><a href=' . $game_link . ' target="_blank"><img class="game" src = '. $game .'></a><br>');
                     echo('<p class="game_name">' . $name . '</p><br>');
-                    echo('<p class="game_description">' . $description . '</p><br><hr></div>');
+                    echo('<p class="game_description">' . $description . '</p><br></div>');
                     }
                 ?>
 
