@@ -70,7 +70,7 @@
                 ?>
 
                 <?php 
-
+                    // RETRIEVE IN DB THE GAME INFORMATION
                     $req = $bdd->query("SELECT game, game_link, name, description FROM images LIMIT 10");
                     while($res = $req->fetch()){
                         $game = $res['game'];
