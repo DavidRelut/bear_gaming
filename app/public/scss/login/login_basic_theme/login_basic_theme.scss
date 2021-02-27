@@ -141,6 +141,20 @@ form {
   transition: 0.5s;
 }
 
+// IN PHP BAD EMAIL OR PASSWORD
+.error {
+  color: $red;
+  font-weight: bold;
+  margin-right: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.error i {
+  color: $red;
+}
+
 .box .inputBox {
   position: relative;
 }

@@ -991,7 +991,7 @@
 		</section>
 
 		<div id="box" class="box">
-			<form method="POST" action="../models/login_post.php">
+			<form method="POST" action="../models/login_basic_post.php">
 				<div class="inputBox">
 					<input type="email" name="email" required><br><br>
 					<label>Email</label>
@@ -1004,11 +1004,11 @@
 				<?php 
 					#ERROR MESSAGE FOR PSEUDO AND PASSWORD
 					if(isset($_COOKIE['error_not_existing_email'])) {
-						echo '<span>Email or Password incorrect<span><br><br>';
+						echo '<span class="error"><i class="fas fa-exclamation-circle"></i>&nbsp;Email or Password incorrect<span><br><br>';
 					}	
 				
 					if(isset($_COOKIE['error_bad_password'])) {
-						echo '<span>Email or Password incorrect</span><br><br>';
+						echo '<span class="error"><i class="fas fa-exclamation-circle"></i>&nbsp;Email or Password incorrect</span><br><br>';
 					}
 				?> 
 

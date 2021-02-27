@@ -1015,7 +1015,7 @@
 
 				<?php 
 					if(isset($_COOKIE['error_register_existing_email'])){
-						echo "<span>Already existing email or pseudo</span><br><br>";
+						echo '<span class="error"><i class="fas fa-exclamation-circle"></i>&nbsp;Already existing email or pseudo</span><br><br>';
 					}
 				?>
 				<button class="cybr-btn" type="submit" name="submit">

@@ -990,30 +990,38 @@
 			</div>
 		</section>
 
-		<div id="box" class="box">
-			<form method="POST" action="../models/login_post.php">
+			<div id="box" class="box">
+			<form method="POST" action="../models/register_basic_post.php">
+				<div class="inputBox">
+					<input type="text" name="pseudo" required><br><br>
+					<Label>Pseudo</label>
+				</div>
 				<div class="inputBox">
 					<input type="email" name="email" required><br><br>
-					<label>Email</label>
+					<Label>Email</label>
+				</div>
+				<div class="inputBox">
+					<input type="text" name="firstname" required><br><br>
+					<Label>First Name</label>
+				</div>
+				<div class="inputBox">
+					<input type="text" name="lastname" required><br><br>
+					<Label>Last Name</label>
 				</div>
 				<div class="inputBox">
 					<input type="password" name="password" required><br><br>
-					<label>Password</label>
+					<Label>Password</label>
 				</div>
 
+
 				<?php 
-					#ERROR MESSAGE FOR PSEUDO AND PASSWORD
-					if(isset($_COOKIE['error_not_existing_email'])) {
-						echo '<span>Email or Password incorrect<span><br><br>';
-					}	
-				
-					if(isset($_COOKIE['error_bad_password'])) {
-						echo '<span>Email or Password incorrect</span><br><br>';
+					if(isset($_COOKIE['error_register_existing_email'])){
+						echo '<span class="error"><i class="fas fa-exclamation-circle"></i>&nbsp;Already existing email or pseudo</span><br><br>';
 					}
-				?> 
+				?>
 
 				<button type="submit" name="submit">REGISTER</button><br><br>
-				<a href="../views/login_basic_theme.php">You have any account register here !</a>
+				<a href="../views/login_basic_theme.php">Back to Login !</a>
 			</form>
 		</div>
 	</body>

@@ -311,6 +311,19 @@ form {
   transition: 0.5s;
 }
 
+.error {
+  color: #ff0000;
+  font-weight: bold;
+  margin-right: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.error i {
+  color: #ff0000;
+}
+
 .box .inputBox {
   position: relative;
 }
