@@ -157,6 +157,30 @@ body {
   box-sizing: border-box;
 }
 
+.error {
+  color: #ff0000;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.error i {
+  color: #ff0000;
+}
+
+.valid {
+  color: #10ff00;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.valid i {
+  color: #10ff00;
+}
+
 video {
   height: 100vh;
   width: 100%;

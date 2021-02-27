@@ -68,29 +68,29 @@
 
                     // PASSWORD ERROR MESSAGE
                     if (isset($_COOKIE['error_password_not_exist'])){
-                        echo "<p style='color:red';><b> Old password entered is incorrect.</br></p>";
+                        echo '<span class="error"><i class="fas fa-exclamation-circle"></i>&nbsp;Old password entered is incorrect.</span><br>';
 
                     }
                     if(isset($_COOKIE['error_same_password'])){
-                        echo "<p style='color:red';><b> The new password is the same as the old !</b></p>";
+                        echo '<span class="error"><i class="fas fa-exclamation-circle"></i>&nbsp;The new password is the same as the old !</span><br>';
                     
                     }
                     if(isset($_COOKIE['update_password'])) {
-                        echo "<p style='color:green';><b> Your password has been properly modified !</br></p>";
+                        echo '<span class="valid"><i class="fas fa-check-circle"></i>&nbsp;Your password has been properly modified !</span><br>';
                     }
 
                     // PSEUDO ERROR MESSAGE
 
                     if (isset($_COOKIE['error_pseudo_not_exist'])){
-                        echo "<p style='color:red';><b> Old pseudo entered is incorrect.</br></p>";
+                        echo '<span class="error"><i class="fas fa-exclamation-circle"></i>&nbsp;Old pseudo entered is incorrect.</span><br>';
 
                     }
                     if(isset($_COOKIE['error_same_pseudo'])){
-                        echo "<p style='color:red';><b> The new pseudo is the same as the old !</b></p>";
+                        echo '<span class="error"><i class="fas fa-exclamation-circle"></i>&nbsp;The new pseudo is the same as the old !</span><br>';
                     
                     }
                     if(isset($_COOKIE['update_pseudo'])) {
-                        echo "<p style='color:green';><b> Your pseudo has been properly modified !</br></p>";
+                        echo '<span class="valid"><i class="fas fa-check-circle"></i>&nbsp;Your pseudo has been properly modified !</span><br>';
                     }
                     ?>
                     </div>
